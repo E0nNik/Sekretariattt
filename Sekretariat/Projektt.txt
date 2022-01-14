@@ -36,7 +36,7 @@ Edytuj pracownika-Formularz sluzacy do edycji
 -Skróty klawiszowe- okno z skrotami klawiszowymi
 
 4.Funkcjonowanie
-
+    
 -Program tworzy listy aby uzyc sortowania oraz wyszukiwania
 -Program jest wstanie modyfikowac pliki z bazy danych
 -Prawa strona okna sluzy do wyswietlania danych ktore sa pobierane z bazy danych
