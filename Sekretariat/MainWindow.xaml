@@ -22,7 +22,7 @@
 
         <Menu HorizontalAlignment="center"  >
             <MenuItem Header="_Wyświetl" Width="150"  >
-                <MenuItem Header="_Uczniowie"  />
+                <MenuItem Header="_Uczniowie" />
                 <MenuItem Header="_Nauczyciele"  />
                 <MenuItem Header="_Pracownicy obsługi"  />
                 <MenuItem Header="_Skróty klawiszowe"   />
@@ -33,10 +33,10 @@
                 <MenuItem Header="Dodaj p_racownika obsługi"  />
             </MenuItem>
             <MenuItem Header="_Operacje"  Width="150">
-                <MenuItem Header="_Wczytaj dane z pliku" />
+                <MenuItem Header="_Wczytaj dane" />
                 <MenuItem Header="Dodaj _zdjęcie do bazy" />
-                <MenuItem Header="Generuj _raport tego okna"/>
-                <MenuItem Header="_Generuj raport całej bazy"/>
+                <MenuItem Header="Generuj _raport okna"/>
+                <MenuItem Header="_Generuj raport bazy danych"/>
             </MenuItem>
         </Menu>
 
@@ -824,7 +824,7 @@
                         <TextBlock Grid.Row="5" FontSize="15" HorizontalAlignment="Center">Imię ojca</TextBlock>
                         <TextBox Name="Uczen_DodajImieOjca" Grid.Row="5" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
                         <TextBlock Grid.Row="6" FontSize="15" HorizontalAlignment="Center">Data urodzenia</TextBlock>
-                        <DatePicker Name="Uczen_DodajDateUrodzenia" Grid.Row="6" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
+                        <DatePicker Name="Uczen_DodajDateUrodzenia" Grid.Row="6" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
                         <TextBlock Grid.Row="7" FontSize="15" HorizontalAlignment="Center">PESEL</TextBlock>
                         <TextBox Name="Uczen_DodajPesel" Grid.Row="7" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
                         <TextBlock Grid.Row="8" FontSize="15" HorizontalAlignment="Center">Płeć</TextBlock>
@@ -836,9 +836,9 @@
                         <TextBlock Grid.Row="11" FontSize="15" HorizontalAlignment="Center">Zdjęcie</TextBlock>
                         <Button Grid.Row="11" Grid.Column="1" Width="200" Height="80" Click="ImportStudentImageButton_Click">Zaimportuj zdjęcie</Button>
 
-                        
-                        <Button Grid.Row="12" FontSize="30" Padding="20" HorizontalAlignment="Left" VerticalAlignment="Center" Click="AddStudentButton_Click">Dodaj ucznia</Button>
-                        <Image Grid.Row="13" Name="Uczen_Zdjecie" Width="150" Height="150"  HorizontalAlignment="right"/>
+
+                        <Button Grid.Row="12" Width="200" Height="80" Padding="20" HorizontalAlignment="Left" VerticalAlignment="Center" Click="AddStudentButton_Click">Dodaj ucznia</Button>
+                        <Image Grid.Row="12" Name="Uczen_Zdjecie" Width="150" Height="150"  HorizontalAlignment="right"/>
 
 
                     </Grid>
@@ -860,7 +860,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.ColumnSpan="2" FontSize="40" FontWeight="Black" Margin="10" HorizontalAlignment="Center">Edytowanie ucznia</TextBlock>
-                    <Grid Grid.Row="1" Width="600" Margin="0,0,0,10">
+                    <Grid Margin="0,73,0,0"  Grid.ColumnSpan="2" >
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
@@ -879,39 +879,34 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock FontSize="30" HorizontalAlignment="Center">Imię</TextBlock>
-                        <TextBox Name="Uczen_EdytujImie" Grid.Column="1" FontSize="25" VerticalAlignment="Center"></TextBox>
-                        <TextBlock Grid.Row="1" FontSize="30" HorizontalAlignment="Center">Drugie imię</TextBlock>
-                        <TextBox Name="Uczen_EdytujDrugieImie" Grid.Row="1" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="2" FontSize="30" HorizontalAlignment="Center">Nazwisko</TextBlock>
-                        <TextBox Name="Uczen_EdytujNazwisko" Grid.Row="2" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="3" FontSize="30" HorizontalAlignment="Center">Nazwisko rodowe</TextBlock>
-                        <TextBox Name="Uczen_EdytujNazwiskoRodowe" Grid.Row="3" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="4" FontSize="30" HorizontalAlignment="Center">Imię matki</TextBlock>
-                        <TextBox Name="Uczen_EdytujImieMatki" Grid.Row="4" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="5" FontSize="30" HorizontalAlignment="Center">Imię ojca</TextBlock>
-                        <TextBox Name="Uczen_EdytujImieOjca" Grid.Row="5" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="6" FontSize="30" HorizontalAlignment="Center">Data urodzenia</TextBlock>
-                        <DatePicker Name="Uczen_EdytujDateUrodzenia" Grid.Row="6" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="7" FontSize="30" HorizontalAlignment="Center">PESEL</TextBlock>
-                        <TextBox Name="Uczen_EdytujPesel" Grid.Row="7" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="8" FontSize="30" HorizontalAlignment="Center">Płeć</TextBlock>
-                        <TextBox Name="Uczen_EdytujPlec" Grid.Row="8" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="9" FontSize="30" HorizontalAlignment="Center">Klasa</TextBlock>
-                        <TextBox Name="Uczen_EdytujKlase" Grid.Row="9" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="10" FontSize="30" HorizontalAlignment="Center">Grupy</TextBlock>
-                        <TextBox Name="Uczen_EdytujGrupy" Grid.Row="10" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="11" FontSize="30" HorizontalAlignment="Center">Zdjęcie</TextBlock>
-                        <Button Grid.Row="11" Grid.Column="1" Width="200" Click="EditStudentImageButton_Click">Zaimportuj zdjęcie</Button>
+                        <TextBlock FontSize="15" HorizontalAlignment="Center">Imię</TextBlock>
+                        <TextBox Name="Uczen_EdytujImie" Grid.Column="1" FontSize="15" VerticalAlignment="Center"></TextBox>
+                        <TextBlock Grid.Row="1" FontSize="15" HorizontalAlignment="Center">Drugie imię</TextBlock>
+                        <TextBox Name="Uczen_EdytujDrugieImie" Grid.Row="1" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="2" FontSize="15" HorizontalAlignment="Center">Nazwisko</TextBlock>
+                        <TextBox Name="Uczen_EdytujNazwisko" Grid.Row="2" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="3" FontSize="15" HorizontalAlignment="Center">Nazwisko rodowe</TextBlock>
+                        <TextBox Name="Uczen_EdytujNazwiskoRodowe" Grid.Row="3" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="4" FontSize="15" HorizontalAlignment="Center">Imię matki</TextBlock>
+                        <TextBox Name="Uczen_EdytujImieMatki" Grid.Row="4" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="5" FontSize="15" HorizontalAlignment="Center">Imię ojca</TextBlock>
+                        <TextBox Name="Uczen_EdytujImieOjca" Grid.Row="5" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="6" FontSize="15" HorizontalAlignment="Center">Data urodzenia</TextBlock>
+                        <DatePicker Name="Uczen_EdytujDateUrodzenia" Grid.Row="6" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="7" FontSize="15" HorizontalAlignment="Center">PESEL</TextBlock>
+                        <TextBox Name="Uczen_EdytujPesel" Grid.Row="7" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="8" FontSize="15" HorizontalAlignment="Center">Płeć</TextBlock>
+                        <TextBox Name="Uczen_EdytujPlec" Grid.Row="8" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="9" FontSize="15" HorizontalAlignment="Center">Klasa</TextBlock>
+                        <TextBox Name="Uczen_EdytujKlase" Grid.Row="9" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="10" FontSize="15" HorizontalAlignment="Center">Grupy</TextBlock>
+                        <TextBox Name="Uczen_EdytujGrupy" Grid.Row="10" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="11" FontSize="15" HorizontalAlignment="Center">Zdjęcie</TextBlock>
+                        <Button Grid.Row="11" Grid.Column="1" Width="200" Height="80"  Click="EditStudentImageButton_Click">Zaimportuj zdjęcie</Button>
+                        <Image Grid.Row="12" Name="Uczen_EdytujZdjecie" Width="150" Height="150"  HorizontalAlignment="right"/>
+                        <Button Grid.Row="12" Width="200" Height="80" Padding="20" HorizontalAlignment="Left" VerticalAlignment="Center"  Click="EditStudentButton_Click">Edytuj ucznia</Button>
                     </Grid>
-                    <Grid Grid.Column="1" Grid.Row="1">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <Image Name="Uczen_EdytujZdjecie" Width="300" Height="300" Margin="10"/>
-                        <Button Grid.Row="1" FontSize="30" Padding="20" HorizontalAlignment="Center" VerticalAlignment="Center" Click="EditStudentButton_Click">Edytuj ucznia</Button>
-                    </Grid>
+                    
                 </Grid>
             </TabItem>
 
@@ -985,8 +980,8 @@
                         <DatePicker Name="Nauczyciel_DodajDateZatrudnienia" Grid.Row="12" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
                         <TextBlock Grid.Row="13" FontSize="15" HorizontalAlignment="Center">Zdjęcie</TextBlock>
                         <Button Grid.Row="13" Grid.Column="1" Width="200" Height="80" Click="ImportTeacherImageButton_Click">Zaimportuj zdjęcie</Button>
-                        <Image Grid.Row="15" Name="Nauczyciel_Zdjecie" Width="150" Height="150" Margin="0,10" HorizontalAlignment="right"/>
-                        <Button Grid.Row="14" FontSize="15" Padding="20" HorizontalAlignment="Left" VerticalAlignment="Center" Click="AddTeacherButton_Click">Dodaj nauczyciela</Button>
+                        <Image Grid.Row="14" Name="Nauczyciel_Zdjecie" Width="150" Height="150" Margin="0,10" HorizontalAlignment="right"/>
+                        <Button Grid.Row="14" Width="200" Height="80" Padding="20" HorizontalAlignment="Left" VerticalAlignment="Center" Click="AddTeacherButton_Click">Dodaj nauczyciela</Button>
                     </Grid>
                     
                 </Grid>
@@ -1006,7 +1001,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.ColumnSpan="2" FontSize="40" FontWeight="Black" Margin="10" HorizontalAlignment="Center">Edytowanie nauczyciela</TextBlock>
-                    <Grid Grid.Row="1" Width="600" Margin="0,0,0,10">
+                    <Grid Margin="0,73,0,0"  Grid.ColumnSpan="2">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
@@ -1027,50 +1022,46 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock FontSize="30" HorizontalAlignment="Center">Imię</TextBlock>
-                        <TextBox Name="Nauczyciel_EdytujImie" Grid.Column="1" FontSize="25" VerticalAlignment="Center"></TextBox>
-                        <TextBlock Grid.Row="1" FontSize="30" HorizontalAlignment="Center">Drugie imię</TextBlock>
-                        <TextBox Name="Nauczyciel_EdytujDrugieImie" Grid.Row="1" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="2" FontSize="30" HorizontalAlignment="Center">Nazwisko</TextBlock>
-                        <TextBox Name="Nauczyciel_EdytujNazwisko" Grid.Row="2" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="3" FontSize="30" HorizontalAlignment="Center">Nazwisko rodowe</TextBlock>
-                        <TextBox Name="Nauczyciel_EdytujNazwiskoRodowe" Grid.Row="3" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="4" FontSize="30" HorizontalAlignment="Center">Imię matki</TextBlock>
-                        <TextBox Name="Nauczyciel_EdytujImieMatki" Grid.Row="4" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="5" FontSize="30" HorizontalAlignment="Center">Imię ojca</TextBlock>
-                        <TextBox Name="Nauczyciel_EdytujImieOjca" Grid.Row="5" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="6" FontSize="30" HorizontalAlignment="Center">Data urodzenia</TextBlock>
-                        <DatePicker Name="Nauczyciel_EdytujDateUrodzenia" Grid.Row="6" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="7" FontSize="30" HorizontalAlignment="Center">PESEL</TextBlock>
-                        <TextBox Name="Nauczyciel_EdytujPesel" Grid.Row="7" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="8" FontSize="30" HorizontalAlignment="Center">Płeć</TextBlock>
-                        <TextBox Name="Nauczyciel_EdytujPlec" Grid.Row="8" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="9" FontSize="30" HorizontalAlignment="Center">Wychowawstwo</TextBlock>
+                        <TextBlock FontSize="15" HorizontalAlignment="Center">Imię</TextBlock>
+                        <TextBox Name="Nauczyciel_EdytujImie" Grid.Column="1" FontSize="15" VerticalAlignment="Center"></TextBox>
+                        <TextBlock Grid.Row="1" FontSize="15" HorizontalAlignment="Center">Drugie imię</TextBlock>
+                        <TextBox Name="Nauczyciel_EdytujDrugieImie" Grid.Row="1" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="2" FontSize="15" HorizontalAlignment="Center">Nazwisko</TextBlock>
+                        <TextBox Name="Nauczyciel_EdytujNazwisko" Grid.Row="2" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="3" FontSize="15" HorizontalAlignment="Center">Nazwisko rodowe</TextBlock>
+                        <TextBox Name="Nauczyciel_EdytujNazwiskoRodowe" Grid.Row="3" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="4" FontSize="15" HorizontalAlignment="Center">Imię matki</TextBlock>
+                        <TextBox Name="Nauczyciel_EdytujImieMatki" Grid.Row="4" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="5" FontSize="15" HorizontalAlignment="Center">Imię ojca</TextBlock>
+                        <TextBox Name="Nauczyciel_EdytujImieOjca" Grid.Row="5" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="6" FontSize="15" HorizontalAlignment="Center">Data urodzenia</TextBlock>
+                        <DatePicker Name="Nauczyciel_EdytujDateUrodzenia" Grid.Row="6" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="7" FontSize="15" HorizontalAlignment="Center">PESEL</TextBlock>
+                        <TextBox Name="Nauczyciel_EdytujPesel" Grid.Row="7" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="8" FontSize="15" HorizontalAlignment="Center">Płeć</TextBlock>
+                        <TextBox Name="Nauczyciel_EdytujPlec" Grid.Row="8" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="9" FontSize="15" HorizontalAlignment="Center">Wychowawstwo</TextBlock>
                         <Grid Grid.Row="9" Grid.Column="1">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
                                 <ColumnDefinition Width="9*"/>
                             </Grid.ColumnDefinitions>
-                            <CheckBox Name="Nauczyciel_EdytujWychowawstwo" FontSize="30" VerticalAlignment="Center"/>
-                            <TextBlock Grid.Column="1" FontSize="25" VerticalAlignment="Center">Posiada wychowawstwo</TextBlock>
+                            <CheckBox Name="Nauczyciel_EdytujWychowawstwo" FontSize="15" VerticalAlignment="Center"/>
+                            <TextBlock Grid.Column="1" FontSize="15" VerticalAlignment="Center">Posiada wychowawstwo</TextBlock>
                         </Grid>
-                        <TextBlock Grid.Row="10" FontSize="30" HorizontalAlignment="Center">Przedmioty</TextBlock>
-                        <TextBox Name="Nauczyciel_EdytujPrzedmioty" Grid.Row="10" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="11" FontSize="30" HorizontalAlignment="Center">Ile naucza</TextBlock>
-                        <TextBox Name="Nauczyciel_EdytujIleNaucza" Grid.Row="11" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="12" FontSize="30" HorizontalAlignment="Center">Data zatrudnienia</TextBlock>
-                        <DatePicker Name="Nauczyciel_EdytujDateZatrudnienia" Grid.Row="12" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="13" FontSize="30" HorizontalAlignment="Center">Zdjęcie</TextBlock>
-                        <Button Grid.Row="13" Grid.Column="1" Width="200" Click="EditTeacherImageButton_Click">Zaimportuj zdjęcie</Button>
+                        <TextBlock Grid.Row="10" FontSize="15" HorizontalAlignment="Center">Przedmioty</TextBlock>
+                        <TextBox Name="Nauczyciel_EdytujPrzedmioty" Grid.Row="10" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="11" FontSize="15" HorizontalAlignment="Center">Ile naucza</TextBlock>
+                        <TextBox Name="Nauczyciel_EdytujIleNaucza" Grid.Row="11" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="12" FontSize="15" HorizontalAlignment="Center">Data zatrudnienia</TextBlock>
+                        <DatePicker Name="Nauczyciel_EdytujDateZatrudnienia" Grid.Row="12" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="13" FontSize="15" HorizontalAlignment="Center">Zdjęcie</TextBlock>
+                        <Button Grid.Row="13" Grid.Column="1" Width="200" Height="80" Click="EditTeacherImageButton_Click">Zaimportuj zdjęcie</Button>
+
+                        <Image Grid.Row="14" Name="Nauczyciel_EdytujZdjecie" Width="150" Height="150"  HorizontalAlignment="right"/>
+                        <Button Grid.Row="14" Width="200" Height="80" Padding="20" HorizontalAlignment="Left" VerticalAlignment="Center"  Click="EditTeacherButton_Click">Edytuj nauczyciela</Button>
                     </Grid>
-                    <Grid Grid.Column="1" Grid.Row="1">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <Image Name="Nauczyciel_EdytujZdjecie" Width="300" Height="300" Margin="10"/>
-                        <Button Grid.Row="1" FontSize="30" Padding="20" HorizontalAlignment="Center" VerticalAlignment="Center" Click="EditTeacherButton_Click">Edytuj nauczyciela</Button>
-                    </Grid>
+                   
                 </Grid>
             </TabItem>
 
@@ -1134,8 +1125,8 @@
                         <DatePicker Name="PracownikObslugi_DodajDateZatrudnienia" Grid.Row="11" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
                         <TextBlock Grid.Row="12" FontSize="15" HorizontalAlignment="Center">Zdjęcie</TextBlock>
                         <Button Grid.Row="12" Grid.Column="1" Width="200" Click="ImportStaffMemberImageButton_Click" Height="80">Zaimportuj zdjęcie</Button>
-                        <Image Grid.Row="14" Name="PracownikObslugi_Zdjecie" Width="150" Height="150" Margin="0,10" HorizontalAlignment="right" Source="NO_IMAGE.png"/>
-                        <Button Grid.Row="13" FontSize="30" Padding="20" VerticalAlignment="Center" HorizontalAlignment="Left" Click="AddStaffMemberButton_Click">Dodaj pracownika</Button>
+                        <Image Grid.Row="13" Name="PracownikObslugi_Zdjecie" Width="150" Height="150" Margin="0,10" HorizontalAlignment="right" Source="NO_IMAGE.png"/>
+                        <Button Grid.Row="13" Width="200" Height="80" Padding="20" VerticalAlignment="Center" HorizontalAlignment="Left" Click="AddStaffMemberButton_Click">Dodaj pracownika</Button>
                     </Grid>
                     
                 </Grid>
@@ -1155,7 +1146,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.ColumnSpan="2" FontSize="40" FontWeight="Black" Margin="10" HorizontalAlignment="Center">Edycja pracownika obsługi</TextBlock>
-                    <Grid Grid.Row="1" Width="600" Margin="0,0,0,10">
+                    <Grid Margin="0,73,0,0"  Grid.ColumnSpan="2" >
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
@@ -1176,40 +1167,35 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
                         <TextBlock FontSize="30" HorizontalAlignment="Center">Imię</TextBlock>
-                        <TextBox Name="PracownikObslugi_EdytujImie" Grid.Column="1" FontSize="25" VerticalAlignment="Center"></TextBox>
-                        <TextBlock Grid.Row="1" FontSize="30" HorizontalAlignment="Center">Drugie imię</TextBlock>
-                        <TextBox Name="PracownikObslugi_EdytujDrugieImie" Grid.Row="1" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="2" FontSize="30" HorizontalAlignment="Center">Nazwisko</TextBlock>
-                        <TextBox Name="PracownikObslugi_EdytujNazwisko" Grid.Row="2" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="3" FontSize="30" HorizontalAlignment="Center">Nazwisko rodowe</TextBlock>
-                        <TextBox Name="PracownikObslugi_EdytujNazwiskoRodowe" Grid.Row="3" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="4" FontSize="30" HorizontalAlignment="Center">Imię matki</TextBlock>
-                        <TextBox Name="PracownikObslugi_EdytujImieMatki" Grid.Row="4" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="5" FontSize="30" HorizontalAlignment="Center">Imię ojca</TextBlock>
-                        <TextBox Name="PracownikObslugi_EdytujImieOjca" Grid.Row="5" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="6" FontSize="30" HorizontalAlignment="Center">Data urodzenia</TextBlock>
-                        <DatePicker Name="PracownikObslugi_EdytujDateUrodzenia" Grid.Row="6" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="7" FontSize="30" HorizontalAlignment="Center">PESEL</TextBlock>
-                        <TextBox Name="PracownikObslugi_EdytujPesel" Grid.Row="7" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="8" FontSize="30" HorizontalAlignment="Center">Płeć</TextBlock>
-                        <TextBox Name="PracownikObslugi_EdytujPlec" Grid.Row="8" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="9" FontSize="30" HorizontalAlignment="Center">Etat</TextBlock>
-                        <TextBox Name="PracownikObslugi_EdytujEtat" Grid.Row="9" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="10" FontSize="30" HorizontalAlignment="Center">Opis stanowiska</TextBlock>
-                        <TextBox Name="PracownikObslugi_EdytujOpisStanowiska" Grid.Row="10" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="11" FontSize="30" HorizontalAlignment="Center">Data zatrudnienia</TextBlock>
-                        <DatePicker Name="PracownikObslugi_EdytujDateZatrudnienia" Grid.Row="11" Grid.Column="1" FontSize="25" VerticalAlignment="Center"/>
-                        <TextBlock Grid.Row="12" FontSize="30" HorizontalAlignment="Center">Zdjęcie</TextBlock>
-                        <Button Grid.Row="12" Grid.Column="1" Width="200" Click="EditStaffMemberImageButton_Click">Zaimportuj zdjęcie</Button>
+                        <TextBox Name="PracownikObslugi_EdytujImie" Grid.Column="1" FontSize="15" VerticalAlignment="Center"></TextBox>
+                        <TextBlock Grid.Row="1" FontSize="15" HorizontalAlignment="Center">Drugie imię</TextBlock>
+                        <TextBox Name="PracownikObslugi_EdytujDrugieImie" Grid.Row="1" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="2" FontSize="15" HorizontalAlignment="Center">Nazwisko</TextBlock>
+                        <TextBox Name="PracownikObslugi_EdytujNazwisko" Grid.Row="2" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="3" FontSize="15" HorizontalAlignment="Center">Nazwisko rodowe</TextBlock>
+                        <TextBox Name="PracownikObslugi_EdytujNazwiskoRodowe" Grid.Row="3" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="4" FontSize="15" HorizontalAlignment="Center">Imię matki</TextBlock>
+                        <TextBox Name="PracownikObslugi_EdytujImieMatki" Grid.Row="4" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="5" FontSize="15" HorizontalAlignment="Center">Imię ojca</TextBlock>
+                        <TextBox Name="PracownikObslugi_EdytujImieOjca" Grid.Row="5" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="6" FontSize="15" HorizontalAlignment="Center">Data urodzenia</TextBlock>
+                        <DatePicker Name="PracownikObslugi_EdytujDateUrodzenia" Grid.Row="6" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="7" FontSize="15" HorizontalAlignment="Center">PESEL</TextBlock>
+                        <TextBox Name="PracownikObslugi_EdytujPesel" Grid.Row="7" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="8" FontSize="15" HorizontalAlignment="Center">Płeć</TextBlock>
+                        <TextBox Name="PracownikObslugi_EdytujPlec" Grid.Row="8" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="9" FontSize="15" HorizontalAlignment="Center">Etat</TextBlock>
+                        <TextBox Name="PracownikObslugi_EdytujEtat" Grid.Row="9" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="10" FontSize="15" HorizontalAlignment="Center">Opis stanowiska</TextBlock>
+                        <TextBox Name="PracownikObslugi_EdytujOpisStanowiska" Grid.Row="10" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="11" FontSize="15" HorizontalAlignment="Center">Data zatrudnienia</TextBlock>
+                        <DatePicker Name="PracownikObslugi_EdytujDateZatrudnienia" Grid.Row="11" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="12" FontSize="15" HorizontalAlignment="Center">Zdjęcie</TextBlock>
+                        <Button Grid.Row="12" Grid.Column="1" Width="200" Height="80" Click="EditStaffMemberImageButton_Click">Zaimportuj zdjęcie</Button>
+                        <Image Grid.Row="13" Name="PracownikObslugi_EdytujZdjecie" Width="150" Height="150"  HorizontalAlignment="right"/>
+                        <Button Grid.Row="13" Width="200" Height="80" Padding="20" HorizontalAlignment="Left" VerticalAlignment="Center"  Click="EditStaffMemberButton_Click">Edytuj pracownika</Button>
                     </Grid>
-                    <Grid Grid.Column="1" Grid.Row="1">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <Image Name="PracownikObslugi_EdytujZdjecie" Width="300" Height="300" Margin="10"/>
-                        <Button Grid.Row="1" FontSize="30" Padding="20" HorizontalAlignment="Center" VerticalAlignment="Center" Click="EditStaffMemberButton_Click">Edytuj pracownika</Button>
-                    </Grid>
+                   
                 </Grid>
             </TabItem>
 
