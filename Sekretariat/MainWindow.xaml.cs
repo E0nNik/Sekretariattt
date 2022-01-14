@@ -53,6 +53,15 @@ namespace Sekretariat
         private Uczen StudentToEdit;
         private Nauczyciel TeacherToEdit;
         private Pracownik_obslugi StaffMemberToEdit;
+        private Uczen StudentOpen;
+        private Nauczyciel TeacherOpen;
+        private Pracownik_obslugi StaffMemberOpen;
+        private Uczen Addstudent;
+        private Nauczyciel Addteacher;
+        private Pracownik_obslugi addmember;
+        
+
+        
 
         public MainWindow()
         {
@@ -174,7 +183,7 @@ namespace Sekretariat
 
         private static void CreateDirectory(string path) => Directory.CreateDirectory(path);
 
-        private string NoImage => Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\NO_IMAGE.png");
+        private string NoImage => Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\IMAGE.png");
 
         private void CopyFile(string sourcePath, string destinationPath) => File.Copy(sourcePath, destinationPath);
 
@@ -266,7 +275,7 @@ namespace Sekretariat
             SaveFileDialog SFD = new SaveFileDialog()
             {
                 InitialDirectory = Environment.SpecialFolder.Desktop.ToString(),
-                FileName = DateTime.Now.ToString("dd.M.yyyy HH.mm.ss") + " - backup bazy danych"
+                FileName = DateTime.Now.ToString("dd.M.yyyy HH.mm.ss") + " baza danych"
             };
        
 
@@ -586,7 +595,50 @@ namespace Sekretariat
                     break;
             }
         }
-      
+
+        private void OpenUczen(object sender, RoutedEventArgs e)
+        {
+            StudentOpen = ((FrameworkElement)sender).DataContext as Uczen;
+            Sekretariat.SelectedIndex = 0;
+
+        }
+
+        private void OpenNauczyciel(object sender, RoutedEventArgs e)
+        {
+            TeacherOpen = ((FrameworkElement)sender).DataContext as Nauczyciel;
+            Sekretariat.SelectedIndex = 1;
+
+        }
+
+        private void OpenPracownik(object sender, RoutedEventArgs e)
+        {
+            StaffMemberOpen = ((FrameworkElement)sender).DataContext as Pracownik_obslugi;
+            Sekretariat.SelectedIndex = 2;
+        }
+
+        private void OpenSkroty(object sender, RoutedEventArgs e)
+        {
+           StudentOpen = ((FrameworkElement)sender).DataContext as Uczen;
+            Sekretariat.SelectedIndex = 9;
+        }
+
+        private void addUczen(object sender, RoutedEventArgs e)
+        {
+            Addstudent = ((FrameworkElement)sender).DataContext as Uczen;
+            Sekretariat.SelectedIndex = 3;
+        }
+
+        private void addNauczyciel(object sender, RoutedEventArgs e)
+        {
+            Addteacher = ((FrameworkElement)sender).DataContext as Nauczyciel;
+            Sekretariat.SelectedIndex = 5;
+        }
+
+        private void addPracownik(object sender, RoutedEventArgs e)
+        {
+            addmember = ((FrameworkElement)sender).DataContext as Pracownik_obslugi;
+            Sekretariat.SelectedIndex = 7;
+        }
     }
 }
 

@@ -1,0 +1,53 @@
+TUTAJ S¥ B£EDY ORAZ ETAPY PRACY
+
+13.01-Stworzenie klas takich jak Uczen, Nauczyciel orac Pracownik_obslugi
+
+-Stworzenie wyszukiwania oraz Sortowania
+
+-mêka z menu
+
+-Dzialania z generowaniem raportu bazy oraz raportu okna
+
+-Dodanie zdjecia
+
+-wprowadzenie formularza na dodawanie uczniów
+
+-wprowadzenie formularza na dodawanie Nauczycieli
+
+-wprowadzenie formularza na dodawanie Pracownikow
+
+-Dodanie Wczytywania Zdjecia 
+
+-Dodanie Wczytywanie plikow
+
+-Poprawione generowanie raportow bazy oraz okna
+
+-Proba stworzenia skrótow klawiszowych
+
+-wciaz nie dzialajace skroty
+
+-dodanie przycisku modyfikoj, ktory przenosi na karty do edycji
+
+-naprawa bledow w sortowaniu oraz wyszukiwaniu
+
+14.01
+
+-male poprawki w layoucie
+
+-Dodanie nowego zdjecia
+
+-Ponowne zabranie sie za menu
+
+-menu dziala tylko dla Dla uczniów
+
+-dzialajace menu dla wyswietl, wziac nie dziala dla Dodaj
+
+-Male poprawki w tabcontrolach edycji
+
+-meka z skrotami
+
+-poprawnie dzialajace juz cale menu
+
+-wciaz skroty nie dzialaja ;/
+
+

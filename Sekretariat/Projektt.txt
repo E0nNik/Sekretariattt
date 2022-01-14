@@ -1,0 +1,45 @@
+PROJEKT SEKRETARIAT SZKOLNY
+
+
+Menu składa się z:
+1.Wyświetl
+-Uczniowie
+-Nauczyciele
+-Pracownicy obsługi
+-króty klawiszowe
+
+2.Dodaj
+-Dodaj ucznia
+-Dodaj nauczyciela
+-Dodaj pracownika obsługi
+
+
+3.Toolbar
+-Wczytaj plik
+-Wczytaj zdjecie
+-Generuj raport wyszukiwania
+-Generuj raport bazy danych
+
+Tabcontrole
+-Uczniowie-Wyswietla baze danych uczniów z opcjami wyszukiwania,sortowania oraz po nacisnieciu przycisku modyfikuj przenosi na tabcontrola do Edycji
+ Edytuj ucznia-Formularz sluzacy do edycji
+
+-Nauczyciele-Wyswietla baze danych nauczycieli z opcjami wyszukiwania,sortowania oraz po nacisnieciu przycisku modyfikuj przenosi na tabcontrola do Edycji
+Edytuj nauczyciela-Formularz sluzacy do edycji
+
+-Pracownicy obsługi-Wyswietla baze danych pracownikow z opcjami wyszukiwania,sortowania oraz po nacisnieciu przycisku modyfikuj przenosi na tabcontrola do Edycji
+Edytuj pracownika-Formularz sluzacy do edycji
+
+-Dodaj ucznia-Dodawanie ucznia za pomoca formularza
+-Dodaj nauczyciela-Dodawanie nauczyciela za pomoca formularza
+-Dodaj pracownika obsługi-Dodawanie pracownika za pomoca formularza
+-Skróty klawiszowe- okno z skrotami klawiszowymi
+
+4.Funkcjonowanie
+
+-Program tworzy listy aby uzyc sortowania oraz wyszukiwania
+-Program jest wstanie modyfikowac pliki z bazy danych
+-Prawa strona okna sluzy do wyswietlania danych ktore sa pobierane z bazy danych
+-w Tabcontrolach sluzacych do dodawania znajduje sie formularz,przycisk sluzacy do zaladowania zdjecia,przycisk sluzacy do dodawania osób
+-Tabcontrole z edycja da sie otworzyc jedynie za pomoca przycisku Modyfikuj
+-Tabcontrol sktroty klawiszowe wyswietla skroty oraz pozwala na edycje ich

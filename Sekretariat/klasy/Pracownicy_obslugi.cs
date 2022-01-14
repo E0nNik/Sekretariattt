@@ -334,7 +334,7 @@ namespace Sekretariat
 
             string img = PracownikObslugi_Zdjecie.Source.ToString()[(PracownikObslugi_Zdjecie.Source.ToString().LastIndexOf("/") + 1)..];
 
-            if (img != "NO_IMAGE.png")
+            if (img != "IMAGE.png")
                 staffMemberProperties += "\t" + img;
 
             SaveIntoDatabase("Pracownicy_obslugi", staffMemberProperties, true);
@@ -390,7 +390,7 @@ namespace Sekretariat
 
             string img = PracownikObslugi_EdytujZdjecie.Source.ToString()[(PracownikObslugi_EdytujZdjecie.Source.ToString().LastIndexOf("/") + 1)..];
 
-            if (img != "NO_IMAGE.png")
+            if (img != "IMAGE.png")
                 properties.Add(img);
 
             List<Pracownik_obslugi> AllStaffMembers = GetStaffMembers();

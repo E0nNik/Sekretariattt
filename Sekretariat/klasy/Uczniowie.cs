@@ -339,7 +339,7 @@ namespace Sekretariat
 
             string img = Uczen_Zdjecie.Source.ToString()[(Uczen_Zdjecie.Source.ToString().LastIndexOf("/") + 1)..];
 
-            if (img != "NO_IMAGE.png")
+            if (img != "IMAGE.png")
                 studentProperties += "\t" + img;
 
             SaveIntoDatabase("Uczniowie", studentProperties, true);
@@ -394,7 +394,7 @@ namespace Sekretariat
 
             string img = Uczen_EdytujZdjecie.Source.ToString()[(Uczen_EdytujZdjecie.Source.ToString().LastIndexOf("/") + 1)..];
 
-            if (img != "NO_IMAGE.png")
+            if (img != "IMAGE.png")
                 properties.Add(img);
 
             List<Uczen> AllStudents = GetStudents();

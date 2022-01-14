@@ -21,22 +21,16 @@
         
 
         <Menu HorizontalAlignment="center"  >
-            <MenuItem Header="_Wyświetl" Width="150"  >
-                <MenuItem Header="_Uczniowie" />
-                <MenuItem Header="_Nauczyciele"  />
-                <MenuItem Header="_Pracownicy obsługi"  />
-                <MenuItem Header="_Skróty klawiszowe"   />
+            <MenuItem Header="_Wyświetl" Width="200"  >
+                <MenuItem Header="_Uczniowie" Click="OpenUczen"/>
+                <MenuItem Header="_Nauczyciele" Click="OpenNauczyciel" />
+                <MenuItem Header="_Pracownicy obsługi" Click="OpenPracownik" />
+                <MenuItem Header="_Skróty klawiszowe"  Click="OpenSkroty" />
             </MenuItem>
-            <MenuItem Header="_Dodaj" Width="150" >
-                <MenuItem Header="Dodaj u_cznia"  />
-                <MenuItem Header="Dodaj nac_zyciela"  />
-                <MenuItem Header="Dodaj p_racownika obsługi"  />
-            </MenuItem>
-            <MenuItem Header="_Operacje"  Width="150">
-                <MenuItem Header="_Wczytaj dane" />
-                <MenuItem Header="Dodaj _zdjęcie do bazy" />
-                <MenuItem Header="Generuj _raport okna"/>
-                <MenuItem Header="_Generuj raport bazy danych"/>
+            <MenuItem Header="_Dodaj" Width="200"  >
+                <MenuItem Header="Dodaj u_cznia"  Click="addUczen"/>
+                <MenuItem Header="Dodaj nac_zyciela"  Click="addNauczyciel"/>
+                <MenuItem Header="Dodaj p_racownika obsługi" Click="addPracownik" />
             </MenuItem>
         </Menu>
 
@@ -791,7 +785,7 @@
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.ColumnSpan="2" FontSize="40" FontWeight="Black" Margin="10" HorizontalAlignment="Center">Dodawanie ucznia</TextBlock>
+                    <TextBlock Grid.ColumnSpan="2" FontSize="30" FontWeight="Black" Margin="10" HorizontalAlignment="Center">Dodaj ucznia</TextBlock>
                     <Grid Margin="0,73,0,0"  Grid.ColumnSpan="2" >
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -923,7 +917,7 @@
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.ColumnSpan="2" FontSize="40" FontWeight="Black" Margin="10" HorizontalAlignment="Center">Dodawanie nauczyciela</TextBlock>
+                    <TextBlock Grid.ColumnSpan="2" FontSize="30" FontWeight="Black" Margin="10" HorizontalAlignment="Center">Dodaj nauczyciela</TextBlock>
                     <Grid   Margin="0,73,0,0"  Grid.ColumnSpan="2" >
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -970,7 +964,7 @@
                                 <ColumnDefinition Width="9*"/>
                             </Grid.ColumnDefinitions>
                             <CheckBox Name="Nauczyciel_DodajWychowawstwo" FontSize="30" VerticalAlignment="Center"/>
-                            <TextBlock Grid.Column="1" FontSize="25" VerticalAlignment="Center">Posiada wychowawstwo</TextBlock>
+                            <TextBlock Grid.Column="1" FontSize="15" VerticalAlignment="Center">Posiada wychowawstwo</TextBlock>
                         </Grid>
                         <TextBlock Grid.Row="10" FontSize="15" HorizontalAlignment="Center">Przedmioty</TextBlock>
                         <TextBox Name="Nauczyciel_DodajPrzedmioty" Grid.Row="10" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
@@ -1078,7 +1072,7 @@
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.ColumnSpan="2" FontSize="40" FontWeight="Black" Margin="10" HorizontalAlignment="Center">Dodawanie pracownika obsługi</TextBlock>
+                    <TextBlock Grid.ColumnSpan="2" FontSize="30" FontWeight="Black" Margin="10" HorizontalAlignment="Center">Dodaj pracownika obsługi</TextBlock>
                     <Grid Margin="0,73,0,0"  Grid.ColumnSpan="2" >
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -1125,7 +1119,7 @@
                         <DatePicker Name="PracownikObslugi_DodajDateZatrudnienia" Grid.Row="11" Grid.Column="1" FontSize="15" VerticalAlignment="Center"/>
                         <TextBlock Grid.Row="12" FontSize="15" HorizontalAlignment="Center">Zdjęcie</TextBlock>
                         <Button Grid.Row="12" Grid.Column="1" Width="200" Click="ImportStaffMemberImageButton_Click" Height="80">Zaimportuj zdjęcie</Button>
-                        <Image Grid.Row="13" Name="PracownikObslugi_Zdjecie" Width="150" Height="150" Margin="0,10" HorizontalAlignment="right" Source="NO_IMAGE.png"/>
+                        <Image Grid.Row="13" Name="PracownikObslugi_Zdjecie" Width="150" Height="150" Margin="0,10" HorizontalAlignment="right" Source="IMAGE.png"/>
                         <Button Grid.Row="13" Width="200" Height="80" Padding="20" VerticalAlignment="Center" HorizontalAlignment="Left" Click="AddStaffMemberButton_Click">Dodaj pracownika</Button>
                     </Grid>
                     
